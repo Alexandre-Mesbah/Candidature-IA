@@ -1,0 +1,4 @@
+{"id":"calc_1","title":"Calculus Notes","text":"The derivative of x squared is two x.\n\nThe derivative of x cubed is three x squared.\n\nPolynomial derivative rules are used in basic calculus."}
+{"id":"opt_1","title":"Optimization Notes","text":"Gradient descent updates parameters in the opposite direction of the gradient.\n\nA learning rate controls the update size."}
+{"id":"bio_1","title":"Biology Notes","text":"Photosynthesis turns light energy into chemical energy.\n\nChlorophyll absorbs light and supports this process in plants."}
+{"id":"ml_1","title":"Machine Learning Notes","text":"Logistic regression uses a sigmoid function to map a real number to a probability between zero and one."}

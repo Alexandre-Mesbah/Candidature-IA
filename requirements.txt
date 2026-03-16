@@ -1,0 +1,2 @@
+# No third-party package is required for this standalone extract.
+# The demo uses only the Python standard library and the OpenAI HTTP API.

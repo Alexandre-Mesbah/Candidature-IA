@@ -1,0 +1,31 @@
+Error Analysis Example
+
+This extract does not include a benchmark suite. The example below is a small qualitative error analysis from a notebook path that uses a deterministic mock embedding function for reproducibility.
+
+Query
+
+how do plants make food from sunlight
+
+Expected result
+
+bio_1 ("Biology Notes"), because the document is about photosynthesis and plant energy conversion.
+
+Actual retrieved result
+
+With the notebook's mock embedding path, the query receives no vocabulary overlap and the top-ranked chunk becomes:
+
+- calc_1
+
+This happens because the mock embedding function only activates on a short keyword list, and the phrasing make food from sunlight does not share tokens with photosynthesis or chlorophyll.
+
+Diagnosis
+
+The retrieval failure is not caused by chunking. It comes from a weak embedding representation in the notebook's reproducible mock path: paraphrases outside the small vocabulary collapse to a near-zero query vector.
+
+Attempted fix
+
+I rephrased the query to:
+
+chemical energy in plants
+
+This immediately retrieves bio_1 first in the same notebook flow. In a real component, the intended fix would be to use a richer embedding model, but in this notebook the fix is modest and reproducible by changing the query phrasing.
